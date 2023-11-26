@@ -9,7 +9,7 @@ Problems and simulators made in Haskell. The problem descriptions are the follow
 
 5.  Implement a simulator in Haskell for the Hagelin C-52 machine and make your implementation configurable. The solution is in the file `Hagelin_C52.hs`.
 
-
+*** The main language of the solutions is Spanish.
 ## Compile and Run Code
 Compile:  
 `ghc -o exe "file_name".hs`   
