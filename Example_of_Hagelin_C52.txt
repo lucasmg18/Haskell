@@ -1,0 +1,76 @@
+Prelude> :l Hagelin.hs
+[1 of 1] Compiling Main             ( Hagelin.hs, interpreted )
+Ok, one module loaded.
+*Main> initialConf
+-----Hagelin c52-----
+Elige posicion inicial de la rueda 29 (Introduce numero entre 1 y 29)
+3
+Elige posicion inicial de la rueda 34 (Introduce numero entre 1 y 34)
+5
+Elige posicion inicial de la rueda 42 (Introduce numero entre 1 y 42)
+3
+Elige posicion inicial de la rueda 41 (Introduce numero entre 1 y 41)
+6
+Elige posicion inicial de la rueda 43 (Introduce numero entre 1 y 43)
+4
+Elige posicion inicial de la rueda 47 (Introduce numero entre 1 y 47)
+7
+Elige el desplazamiento inicial de las ruedas de impresión (Introduce numero mayor o igual a 0)
+3
+Elige el nombre (con el .txt) del fichero donde guardar la configuracion
+conf.txt
+-----Hagelin c52-----
+*Main> let ruedas = [Wheel 2 [1,0,1,0,0,1,0,1,1,1,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1],Wheel 4 [0,0,1,0,1,1,1,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1],Wheel 2 [0,1,1,1,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,1,1,0,1],Wheel 5 [1,1,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,1,1,0,1,1,0],Wheel 3 [0,1,0,1,
+1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,1,1,0,1,1,0,0,0,0,1,0],Wheel 6 [1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,1,1,0,0,1,0,1,1,1,0,1,1,0,0,0,0,1,0,1,1,0,1,0,0,1]]
+*Main> let tambor = [[1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1],[1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1],[1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1],[1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+*Main> let r1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+*Main> let r2 = "DCBAZYXWVUTSRQPONMLKJIHGFE"
+*Main> ciphDeciphText "avion atacando a enemigos en sector tres" ruedas tambor r1 r2
+Elige opcion:
+1: Imprimir por pantalla texto cifrado modo normal (fijo)
+2: Imprimir por pantalla y por fichero modo normal (fijo)
+3: Imprimir por pantalla texto cifrado modo variable     
+4: Imprimir por pantalla y por fichero modo variable     
+0: Salir del programa
+2
+Elige el nombre (con el .txt) del fichero donde guardar el texto
+c.txt
+XZGEBWJSKHJASIKRRUOQJHSGEBWMNZCJWUUPQTBS
+*Main> ciphDeciphText "XZGEBWJSKHJASIKRRUOQJHSGEBWMNZCJWUUPQTBS" ruedas tambor r1 r2
+Elige opcion:
+1: Imprimir por pantalla texto cifrado modo normal (fijo)
+2: Imprimir por pantalla y por fichero modo normal (fijo)
+3: Imprimir por pantalla texto cifrado modo variable
+4: Imprimir por pantalla y por fichero modo variable
+0: Salir del programa
+2
+Elige el nombre (con el .txt) del fichero donde guardar el texto
+d.txt
+AVIONXATACANDOXAXENEMIGOSXENXSECTORXTRES
+*Main> replaceCharFor 'X' ' ' "AVIONXATACANDOXAXENEMIGOSXENXSECTORXTRES"
+"AVION ATACANDO A ENEMIGOS EN SECTOR TRES"
+*Main> ciphDeciphText "avion atacando a enemigos en sector tres" ruedas tambor r1 r2
+Elige opcion:
+1: Imprimir por pantalla texto cifrado modo normal (fijo)
+2: Imprimir por pantalla y por fichero modo normal (fijo)
+3: Imprimir por pantalla texto cifrado modo variable
+4: Imprimir por pantalla y por fichero modo variable
+0: Salir del programa
+4
+Elige el nombre (con el .txt) del fichero donde guardar el texto
+cv.txt
+XTRAMSVKKOWTVDYJXLAAKAXGVLBOLEVFAKPSCLAT
+*Main> ciphDeciphText "XTRAMSVKKOWTVDYJXLAAKAXGVLBOLEVFAKPSCLAT" ruedas tambor r1 r2
+Elige opcion:
+1: Imprimir por pantalla texto cifrado modo normal (fijo)
+2: Imprimir por pantalla y por fichero modo normal (fijo)
+3: Imprimir por pantalla texto cifrado modo variable
+4: Imprimir por pantalla y por fichero modo variable
+0: Salir del programa
+4
+Elige el nombre (con el .txt) del fichero donde guardar el texto
+dv.txt
+AVIONXATACANDOXAXENEMIGOSXENXSECTORXTRES
+*Main> replaceCharFor 'X' ' ' "AVIONXATACANDOXAXENEMIGOSXENXSECTORXTRES"
+"AVION ATACANDO A ENEMIGOS EN SECTOR TRES"
+*Main>
